@@ -1,5 +1,10 @@
 function stringChop(str, size) {
-  // Ensure size is a valid number and handle non-positive size
+  // Check if str is null or undefined and handle non-positive size
+  if (str == null) {
+    return [];
+  }
+
+  // Ensure size is a valid number
   size = parseInt(size);
   if (isNaN(size) || size <= 0) {
     return [];
